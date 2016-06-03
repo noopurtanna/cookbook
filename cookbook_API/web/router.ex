@@ -20,7 +20,7 @@ defmodule Cookbook.Router do
   end
 
   # Other scopes may use custom stacks.
-  scope "/api", Cookbook do
+  scope "/", Cookbook do
     pipe_through :api
     resources "/recipes", RecipeController, except: [:new, :edit]
   end
